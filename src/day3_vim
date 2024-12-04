@@ -1,0 +1,13 @@
+Part A
+:%s/)/)/r/g
+:g!/\v.*(mul)\((\d+),(\d+)\)\n/d
+:%s/\v.*(mul)\((\d+),(\d+)\)/\=eval(submatch(2)*submatch(3))/g
+gg
+<ctrl-v>
+G
+6l
+y
+:echo eval(join(split(@", '\_s\+'), '+'))
+
+Part B
+:%s/don't()\_.\{-}do()//g
