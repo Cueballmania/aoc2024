@@ -1,5 +1,7 @@
 module Main (main) where
 
+import Day9
+import Day11
 import Day5
 import Day4
 import Day2
@@ -13,4 +15,7 @@ main =
     day2bMain >>
     day4aMain >>
     day5aMain >>
-    day5bMain
+    day5bMain >>
+    day11aMain >>
+    day11bMain >>
+    day9aMain
